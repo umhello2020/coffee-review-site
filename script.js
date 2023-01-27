@@ -10,7 +10,7 @@ function coffeeDrinks () {
     })
 }
 
-function showRandomCoffee (data) {
+function showCoffee (data) {
     
 }
 
