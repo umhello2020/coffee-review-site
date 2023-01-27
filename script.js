@@ -7,10 +7,12 @@ function coffeeDrinks () {
     })
     .then(function(data) {
         showCoffee(data);
+        console.log(data);
     })
+    
 }
 
-function showRandomCoffee (data) {
+function showCoffee (data) {
     
 }
 
