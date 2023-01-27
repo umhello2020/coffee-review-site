@@ -7,7 +7,9 @@ function coffeeDrinks () {
     })
     .then(function(data) {
         showCoffee(data);
+        console.log(data);
     })
+    
 }
 
 function showCoffee (data) {
