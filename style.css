@@ -4,9 +4,10 @@ body {
     font-family: monospace;
     line-height: 1.5;
     color: black;
-    height: 1400px;
+    height: 4000px;
 }
 
+/* Header/Navbar */
 header {
     background-color: rgb(126, 86, 54);
 }
@@ -24,6 +25,7 @@ h1 {
     color: cornsilk;
 }
 
+/* Main content */
 .content {
     font-size: 20px;
     margin-top: 50px;
@@ -32,20 +34,41 @@ h1 {
 }
 
 .first-p {
-    text-indent: 1rem;
+    text-indent: 3rem;
+    margin-left: 5px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.button {
+    background-color: rgb(78, 16, 1);
+    font-size: 20px;
+    color: rgb(196, 186, 151);
+    border: solid 1px black;
+    box-shadow: 5px 5px 10px rgba(145, 140, 134, 0.753);
+}
+
+.button:hover {
+    color: rgb(165, 154, 112);
+}
+
+/* Individual sections */
+#mission-statement h2{
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 #mission-statement {
-    border: dashed rgb(75, 43, 22) 1px;
-    /* margin: 1rem; */
+    border: dashed rgb(75, 43, 22) 2px;
+    margin-bottom: 40px;
 }
 
 #random-coffee {
-    border: dashed rgb(75, 43, 22) 1px;
-    /* margin: 1rem; */
+    border: dashed rgb(75, 43, 22) 2px;
+    margin-bottom: 40px;
+    padding: 10px;
 }
 
 #try-drink {
-    border: dashed rgb(75, 43, 22) 1px;
-    /* margin: 1rem; */
+    border: dashed rgb(75, 43, 22) 2px;
 }
