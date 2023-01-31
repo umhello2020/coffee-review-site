@@ -33,7 +33,7 @@ h1 {
     margin-right: 150px;
 }
 
-.first-p {
+p {
     text-indent: 3rem;
     margin-left: 5px;
     margin-right: 10px;
@@ -58,9 +58,16 @@ h1 {
     margin-bottom: 10px;
 }
 
+#weather {
+    border: dashed rgb(75, 43, 22) 2px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
 #mission-statement {
     border: dashed rgb(75, 43, 22) 2px;
     margin-bottom: 40px;
+    padding: 10px;
 }
 
 #random-coffee {
@@ -71,4 +78,6 @@ h1 {
 
 #try-drink {
     border: dashed rgb(75, 43, 22) 2px;
+    margin-bottom: 40px;
+    padding: 10px;
 }
