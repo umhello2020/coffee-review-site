@@ -78,6 +78,36 @@ p {
 
 #try-drink {
     border: dashed rgb(75, 43, 22) 2px;
-    margin-bottom: 40px;
-    padding: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    header {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .breadcrumb a {
+        font-size: 16px;
+    }
+    .content {
+        margin: 10px;
+        font-size: 16px;
+    }
+    .first-p {
+        text-indent: 1rem;
+    }
+    .button {
+        font-size: 16px;
+    }
+    #mission-statement h2 {
+        font-size: 22px;
+    }
+    #random-coffee, #try-drink {
+        padding: 5px;
+    }
 }
