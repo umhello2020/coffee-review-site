@@ -19,7 +19,7 @@ function coffeeDrinks () {
 function showCoffee (data) {
     
 }
-
+                                                                                                                   
 coffeeDrinks();
 
 function cityData(city) {
