@@ -2,13 +2,11 @@ let coffeeDayEl = document.getElementById('coffee-day');
 let cityInputEl = document.getElementById('city-input');
 let currentDayEl = document.getElementById('current-day');
 let cityInfo = document.getElementById('city-info');
+let submitBtn = document.getElementById('submit-btn');
+let cityInput = document.getElementById('city-input').value;
 let randomDisplay = document.getElementById('random-display');
 let randomDiv = document.getElementById('random-coffee');
-let submitBtn = document.getElementById('submit-id');
-let cityInput = document.getElementById('city-input');
-let randomDisplay = document.getElementById('random-display')
-let randomDiv = document.getElementById('random-coffee')
-let randomButton =document.getElementById("random-coffee-button")
+let randomButton =document.getElementById("random-coffee-button");
 
 function coffeeDrinks() {
     randomNumber()
@@ -119,7 +117,4 @@ function displayToday(todaysInfo) {
     }
 }
 
-submitBtn.addEventListener('click', function () {
-    let city = cityInput.value;
-    cityData(city);
-})
+submitBtn.addEventListener('click', cityData(cityInput));
