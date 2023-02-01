@@ -6,10 +6,10 @@ let submitBtn = document.getElementById('submit-btn');
 let cityInput = document.getElementById('city-input');
 let randomDisplay = document.getElementById('random-display');
 let randomDiv = document.getElementById('random-coffee');
-let randomButton =document.getElementById("random-coffee-button");
+let randomButton = document.getElementById("random-coffee-button");
 
 function coffeeDrinks() {
-    randomNumber()
+
     fetch("https://api.sampleapis.com/coffee/hot")
 
         .then(function (response) {
@@ -17,68 +17,46 @@ function coffeeDrinks() {
         })
         .then(function (data) {
             console.log(data)
-            var randomIndex = randomInt;
             var randomSelection = document.createElement("a")
-            randomSelection.content = data[randomIndex]
+
             randomDiv.appendChild(randomSelection)
-
-
-
-
             generateDisplay(data)
 
-            function generateDisplay(data) {
-                const coffeeInfo = document.querySelector("#coffeeDesc")
-
-
-
-                for (let i = 0; i < 1; i++) {
-                    var titleEL = document.createElement("p")
-                    var imageEL = document.createElement("div")
-                    var ul = document.createElement("ul")
-                    var descriptionEL = document.createElement("section")
-                
-                    coffeeInfo.appendChild(ul);
-
-                    for (let j = 0; j < data[randomIndex].ingredients.length; j++) {
-                        let currentIng = data[randomIndex].ingredients[j]
-                        let li = document.createElement("li")
-                        li.appendChild(document.createTextNode(currentIng))
-                        ul.appendChild(li)
-
-                    }
-
-
-                    coffeeInfo.appendChild(titleEL)
-                    coffeeInfo.appendChild(imageEL)
-                    coffeeInfo.appendChild(descriptionEL)
-
-
-                    
-                    var selectedDrinkTitle = data[randomIndex].title
-                    var selectedDrinkDescription = data[randomIndex].description
-                    var selectedDrinkImg = data[randomIndex].image
-
-                    titleEL.innerText = selectedDrinkTitle
-                    imageEL.innerHTML = selectedDrinkImg
-                    descriptionEL.innerText = selectedDrinkDescription
-
-                    
-                }
-
-            }
         })
 
 }
 
+function generateDisplay(data) {
+    let randomInt = Math.floor(Math.random() * 20);
+    const coffeeInfo = document.querySelector("#coffeeDesc")
 
-function randomNumber() {
-    randomInt = Math.floor(Math.random() * 20);
-    return randomInt
+    var titleEL = document.createElement("p")
+    var imageEL = document.createElement("p")
+    var descriptionEL = document.createElement("p")
+    var ul = document.createElement("ul")
+
+    titleEL.innerText = data[randomInt].title
+    descriptionEL.innerText = data[randomInt].description
+    imageEL.innerText = data[randomInt].image
+
+    coffeeInfo.appendChild(titleEL)
+    coffeeInfo.appendChild(imageEL)
+    coffeeInfo.appendChild(descriptionEL)
+    coffeeInfo.appendChild(ul);
+
+    for (let j = 0; j < data[randomInt].ingredients.length; j++) {
+        let currentIng = data[randomInt].ingredients[j]
+        let li = document.createElement("li")
+        li.appendChild(document.createTextNode(currentIng))
+        ul.appendChild(li)
+
+    }
 }
 
+
+
 randomButton.addEventListener('click', coffeeDrinks);
-                                                                                                                   
+
 
 
 function cityData(city) {
