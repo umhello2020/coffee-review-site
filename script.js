@@ -37,10 +37,8 @@ function coffeeDrinks() {
                     var imageEL = document.createElement("div")
                     var ul = document.createElement("ul")
                     var descriptionEL = document.createElement("section")
-
-                    imageEL.setAttribute('img');
-                    imageEL.setAttribute('src', data[randomIndex].image);
-                    coffeeInfo.appendChild(ul, imageEL);
+                
+                    coffeeInfo.appendChild(ul);
 
                     for (let j = 0; j < data[randomIndex].ingredients.length; j++) {
                         let currentIng = data[randomIndex].ingredients[j]
