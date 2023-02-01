@@ -37,7 +37,10 @@ function coffeeDrinks() {
                     var imageEL = document.createElement("div")
                     var ul = document.createElement("ul")
                     var descriptionEL = document.createElement("section")
-                    coffeeInfo.appendChild(ul)
+
+                    imageEL.setAttribute('img');
+                    imageEL.setAttribute('src', data[randomIndex].image);
+                    coffeeInfo.appendChild(ul, imageEL);
 
                     for (let j = 0; j < data[randomIndex].ingredients.length; j++) {
                         let currentIng = data[randomIndex].ingredients[j]
@@ -80,8 +83,9 @@ randomButton.addEventListener('click', coffeeDrinks);
                                                                                                                    
 
 
-function cityData(city) {
-    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=5f03a7ebe75741bbe3cd6f91f18b0bd7")
+function cityData(cityInput) {
+    console.log(cityInput)
+    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + cityInput + "&appid=5f03a7ebe75741bbe3cd6f91f18b0bd7")
         .then(function (response) {
             return response.json();
         })
