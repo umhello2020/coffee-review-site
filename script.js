@@ -51,17 +51,16 @@ function coffeeDrinks() {
                     coffeeInfo.appendChild(descriptionEL)
 
 
-                    function addingInfo (data) {
-                    var selectedDrinkTitle = data[randomIndex].title[randomIndex]
-                    var selectedDrinkDescription = data[randomIndex].description[randomIndex]
-                    var selectedDrinkImg = data[randomIndex].image[randomIndex]
+                    
+                    var selectedDrinkTitle = data[randomIndex].title
+                    var selectedDrinkDescription = data[randomIndex].description
+                    var selectedDrinkImg = data[randomIndex].image
 
-                    titleEL.document.createTextNode(selectedDrinkTitle)
-                    imageEL.appendChild(selectedDrinkImg)
-                    descriptionEL.innerText(selectedDrinkDescription)}
+                    titleEL.innerText = selectedDrinkTitle
+                    imageEL.innerHTML = selectedDrinkImg
+                    descriptionEL.innerText = selectedDrinkDescription
 
-                    addingInfo()
-
+                    
                 }
 
             }
