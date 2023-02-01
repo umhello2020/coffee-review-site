@@ -30,6 +30,6 @@
 
 ## Features
 
-*City search input and button
+*City search input and button for temperature and hot or iced coffee recommendation
 *Random coffee generator button
 
