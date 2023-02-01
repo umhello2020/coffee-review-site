@@ -4,7 +4,7 @@ let currentDayEl = document.getElementById('current-day');
 let cityInfo = document.getElementById('city-info');
 let randomDisplay = document.getElementById('random-display')
 let randomDiv = document.getElementById('random-coffee')
-
+let randomButton =document.getElementById("random-coffee-button")
 
 function coffeeDrinks() {
     randomNumber()
@@ -74,7 +74,7 @@ function randomNumber() {
     return randomInt
 }
 
-coffeeDrinks();
+randomButton.addEventListener('click', coffeeDrinks);
 
 function cityData(city) {
     fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=5f03a7ebe75741bbe3cd6f91f18b0bd7")
