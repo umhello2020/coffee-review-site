@@ -36,9 +36,10 @@ function generateDisplay(data) {
     var imageEL = document.createElement("img")
     var descriptionEL = document.createElement("p")
     var ul = document.createElement("ul")
+    coffeeInfo.innerHTML = ''
 
 
-        titleEL.innerText = data[randomInt].title
+    titleEL.innerText = data[randomInt].title
     descriptionEL.innerText = data[randomInt].description
     imageEL.src = data[randomInt].image
 
