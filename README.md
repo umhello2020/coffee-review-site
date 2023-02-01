@@ -11,8 +11,6 @@
 ![Screenshot_20230131_074119](https://user-images.githubusercontent.com/118483617/215924257-fe4b5704-f196-4efc-a578-f54f6b361b5b.png)
 ![Screenshot_20230131_094115](https://user-images.githubusercontent.com/118483617/215939816-dd6461d2-c785-4215-a8d3-76bbb30c1ad9.png)
 ![Screenshot_20230131_094130](https://user-images.githubusercontent.com/118483617/215939831-4a964c1c-d958-4f2d-96c4-923c4a98099f.png)
-
-
  
 ## Installation
  
