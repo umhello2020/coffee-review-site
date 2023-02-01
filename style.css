@@ -4,7 +4,6 @@ body {
     font-family: monospace;
     line-height: 1.5;
     color: black;
-    height: 4000px;
 }
 
 /* Header/Navbar */
@@ -76,9 +75,9 @@ p {
     padding: 10px;
 }
 
-#try-drink {
+/* #try-drink {
     border: dashed rgb(75, 43, 22) 2px;
-}
+} */
 
 @media only screen and (max-width: 767px) {
     body {
@@ -107,7 +106,7 @@ p {
     #mission-statement h2 {
         font-size: 22px;
     }
-    #random-coffee, #try-drink {
+    #random-coffee {
         padding: 5px;
     }
 }
