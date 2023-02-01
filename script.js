@@ -3,7 +3,7 @@ let cityInputEl = document.getElementById('city-input');
 let currentDayEl = document.getElementById('current-day');
 let cityInfo = document.getElementById('city-info');
 let submitBtn = document.getElementById('submit-btn');
-let cityInput = document.getElementById('city-input').value;
+let cityInput = document.getElementById('city-input');
 let randomDisplay = document.getElementById('random-display');
 let randomDiv = document.getElementById('random-coffee');
 let randomButton =document.getElementById("random-coffee-button");
@@ -83,17 +83,16 @@ randomButton.addEventListener('click', coffeeDrinks);
                                                                                                                    
 
 
-function cityData(cityInput) {
+function cityData(city) {
     console.log(cityInput)
-    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + cityInput + "&appid=5f03a7ebe75741bbe3cd6f91f18b0bd7")
+    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=5f03a7ebe75741bbe3cd6f91f18b0bd7")
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            let currentLat = data[0].lat
-            let currentLon = data[0].lon
-            currentDay(currentLat, currentLon)
-            currentForecast(currentLat, currentLon);
+            let currentLat = data[0].lat;
+            let currentLon = data[0].lon;
+            currentDay(currentLat, currentLon);
         })
 }
 
@@ -121,4 +120,7 @@ function displayToday(todaysInfo) {
     }
 }
 
-submitBtn.addEventListener('click', cityData(cityInput));
+submitBtn.addEventListener('click', function () {
+    city = cityInput.value;
+    cityData(city);
+});
