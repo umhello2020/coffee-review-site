@@ -5,7 +5,7 @@
 *Take a Sip is a website for coffee enthusiasts and connoisseurs. On this site, you'll find information about coffee recipes, an option to generate a random coffee recipe, and you can get a coffee recommendation of hot or iced personalized to your current weather. If you're looking for a new coffee recipe to try you're in the right place.
  
 ## Link
-*Here is a link to the deployed project: https://umhello2020.github.io/coffee-review-site/*
+*Here is a link to the deployed project: https://umhello2020.github.io/coffee-review-site/
 
 ## Visuals
 ![Screenshot_20230131_074119](https://user-images.githubusercontent.com/118483617/215924257-fe4b5704-f196-4efc-a578-f54f6b361b5b.png)
@@ -26,9 +26,10 @@
 
 ## License
 
-*See repository for license*
+*See repository for LICENSE
 
 ## Features
 
-*Random coffee genorator button
+*City search input and button
+*Random coffee generator button
 
