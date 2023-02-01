@@ -8,12 +8,16 @@ let randomDisplay = document.getElementById('random-display');
 let randomDiv = document.getElementById('random-coffee');
 let randomButton = document.getElementById("random-coffee-button");
 
+
+
 function coffeeDrinks() {
 
     fetch("https://api.sampleapis.com/coffee/hot")
         .then(function (response) {
             return response.json();
         })
+
+
         .then(function (data) {
             console.log(data)
             var randomSelection = document.createElement("a")
@@ -21,6 +25,8 @@ function coffeeDrinks() {
             generateDisplay(data)
         })
 }
+
+
 
 function generateDisplay(data) {
     
@@ -30,13 +36,18 @@ function generateDisplay(data) {
     var imageEL = document.createElement("img")
     var descriptionEL = document.createElement("p")
     var ul = document.createElement("ul")
-    titleEL.innerText = data[randomInt].title
+
+
+        titleEL.innerText = data[randomInt].title
     descriptionEL.innerText = data[randomInt].description
     imageEL.src = data[randomInt].image
+
+
     coffeeInfo.appendChild(titleEL)
     coffeeInfo.appendChild(imageEL)
     coffeeInfo.appendChild(descriptionEL)
     coffeeInfo.appendChild(ul);
+
 
     for (let j = 0; j < data[randomInt].ingredients.length; j++) {
         let currentIng = data[randomInt].ingredients[j]
@@ -47,6 +58,7 @@ function generateDisplay(data) {
 }
 
 randomButton.addEventListener('click', coffeeDrinks);
+
 
 function cityData(city) {
 
