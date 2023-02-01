@@ -90,9 +90,9 @@ function displayToday(todaysInfo) {
     let goodDay = document.getElementById('good-day');
     console.log(todaysInfo)
     tempEl.textContent = 'It is ' + todaysInfo.main.temp + '°F';
-    if (todaysInfo.main.temp >= 65) {
+    if (todaysInfo.main.temp >= 18) {
         goodDay.textContent = 'Today is a good day for hot coffee!';
-    } else if (todaysInfo.main.temp <= 64) {
+    } else if (todaysInfo.main.temp <= 17) {
         goodDay.textContent = 'Today is a good day for iced coffee!';
     }
 }
