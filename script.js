@@ -6,10 +6,10 @@ let submitBtn = document.getElementById('submit-btn');
 let cityInput = document.getElementById('city-input');
 let randomDisplay = document.getElementById('random-display');
 let randomDiv = document.getElementById('random-coffee');
-let randomButton =document.getElementById("random-coffee-button");
+let randomButton = document.getElementById("random-coffee-button");
 
 function coffeeDrinks() {
-    randomNumber()
+
     fetch("https://api.sampleapis.com/coffee/hot")
 
         .then(function (response) {
@@ -17,14 +17,9 @@ function coffeeDrinks() {
         })
         .then(function (data) {
             console.log(data)
-            var randomIndex = randomInt;
             var randomSelection = document.createElement("a")
-            randomSelection.content = data[randomIndex]
+
             randomDiv.appendChild(randomSelection)
-
-
-
-
             generateDisplay(data)
 
             function generateDisplay(data) {
@@ -72,13 +67,9 @@ function coffeeDrinks() {
 }
 
 
-function randomNumber() {
-    randomInt = Math.floor(Math.random() * 20);
-    return randomInt
-}
 
 randomButton.addEventListener('click', coffeeDrinks);
-                                                                                                                   
+
 
 
 function cityData(city) {
