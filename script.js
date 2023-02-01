@@ -37,7 +37,7 @@ function generateDisplay(data) {
     
     titleEL.innerText = data[randomInt].title
     descriptionEL.innerText = data[randomInt].description
-    imageEL.innerHTML = data[randomInt].image
+    imageEL.src = data[randomInt].image
     
     coffeeInfo.appendChild(titleEL)
     coffeeInfo.appendChild(imageEL)
