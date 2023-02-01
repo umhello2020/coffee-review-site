@@ -8,6 +8,9 @@
 *Here is a link to the deployed project: https://umhello2020.github.io/coffee-review-site/*
 
 ## Visuals
+![Screenshot_20230131_074119](https://user-images.githubusercontent.com/118483617/215924257-fe4b5704-f196-4efc-a578-f54f6b361b5b.png)
+![Screenshot_20230131_074135](https://user-images.githubusercontent.com/118483617/215924289-f2dae438-4cb7-45b8-9726-c57476a8a203.png)
+![Screenshot_20230131_074149](https://user-images.githubusercontent.com/118483617/215924307-7559ec23-6a77-4ca7-9ede-ff51dcafa41a.png)
 
  
 ## Installation
