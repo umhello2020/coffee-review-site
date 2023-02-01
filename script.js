@@ -2,6 +2,10 @@ let coffeeDayEl = document.getElementById('coffee-day');
 let cityInputEl = document.getElementById('city-input');
 let currentDayEl = document.getElementById('current-day');
 let cityInfo = document.getElementById('city-info');
+let randomDisplay = document.getElementById('random-display');
+let randomDiv = document.getElementById('random-coffee');
+let submitBtn = document.getElementById('submit-id');
+let cityInput = document.getElementById('city-input');
 let randomDisplay = document.getElementById('random-display')
 let randomDiv = document.getElementById('random-coffee')
 let randomButton =document.getElementById("random-coffee-button")
@@ -103,10 +107,19 @@ function currentDay(lat, lon) {
 }
 
 function displayToday(todaysInfo) {
-    let date = dayjs().format('M/D/YYYY');
-    let tempEl = document.getElementById('temp');
+    let tempEl = document.getElementById('temp-display');
+    let goodDay = document.getElementById('good-day');
 
-    let city = cityInputEl.value;
-    cityInfo.textContent = city + '   ' + date;
-    tempEl.textContent = 'Temp: ' + todaysInfo.main.temp + '°F';
+    console.log(todaysInfo)
+    tempEl.textContent = 'It is ' + todaysInfo.main.temp + '°F';
+    if (todaysInfo.main.temp >= 65) {
+        goodDay.textContent = 'Today is a good day for hot coffee!';
+    } else if (todaysInfo.main.temp <= 64) {
+        goodDay.textContent = 'Today is a good day for iced coffee!';
+    }
 }
+
+submitBtn.addEventListener('click', function () {
+    let city = cityInput.value;
+    cityData(city);
+})
