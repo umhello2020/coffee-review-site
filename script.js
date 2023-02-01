@@ -80,7 +80,7 @@ function randomNumber() {
 
 randomButton.addEventListener('click', coffeeDrinks);
                                                                                                                    
-coffeeDrinks();
+
 
 function cityData(city) {
     fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=5f03a7ebe75741bbe3cd6f91f18b0bd7")
