@@ -4,7 +4,7 @@ let currentDayEl = document.getElementById('current-day');
 let cityInfo = document.getElementById('city-info');
 let randomDisplay = document.getElementById('random-display')
 let randomDiv = document.getElementById('random-coffee')
-
+let randomButton =document.getElementById("random-coffee-button")
 
 function coffeeDrinks() {
     randomNumber()
@@ -73,6 +73,8 @@ function randomNumber() {
     randomInt = Math.floor(Math.random() * 20);
     return randomInt
 }
+
+randomButton.addEventListener('click', coffeeDrinks);
                                                                                                                    
 coffeeDrinks();
 
