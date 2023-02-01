@@ -28,40 +28,40 @@ function coffeeDrinks() {
             generateDisplay(data)
 
             function generateDisplay(data) {
-                const coffeeInfo = document.querySelector("#coffeeDesc")
+                const coffeeInfo = document.querySelector("#coffeeDesc");
 
 
 
                 for (let i = 0; i < 1; i++) {
-                    var titleEL = document.createElement("p")
-                    var imageEL = document.createElement("div")
-                    var ul = document.createElement("ul")
-                    var descriptionEL = document.createElement("section")
+                    var titleEL = document.createElement("p");
+                    var imageEL = document.createElement("div");
+                    var ul = document.createElement("ul");
+                    var descriptionEL = document.createElement("section");
                 
                     coffeeInfo.appendChild(ul);
 
                     for (let j = 0; j < data[randomIndex].ingredients.length; j++) {
-                        let currentIng = data[randomIndex].ingredients[j]
-                        let li = document.createElement("li")
-                        li.appendChild(document.createTextNode(currentIng))
-                        ul.appendChild(li)
+                        let currentIng = data[randomIndex].ingredients[j];
+                        let li = document.createElement("li");
+                        li.appendChild(document.createTextNode(currentIng));
+                        ul.appendChild(li);
 
                     }
 
 
-                    coffeeInfo.appendChild(titleEL)
-                    coffeeInfo.appendChild(imageEL)
-                    coffeeInfo.appendChild(descriptionEL)
+                    coffeeInfo.appendChild(titleEL);
+                    coffeeInfo.appendChild(imageEL);
+                    coffeeInfo.appendChild(descriptionEL);
 
 
                     
-                    var selectedDrinkTitle = data[randomIndex].title
-                    var selectedDrinkDescription = data[randomIndex].description
-                    var selectedDrinkImg = data[randomIndex].image
+                    var selectedDrinkTitle = data[randomIndex].title;
+                    var selectedDrinkDescription = data[randomIndex].description;
+                    var selectedDrinkImg = data[randomIndex].image;
 
-                    titleEL.innerText = selectedDrinkTitle
-                    imageEL.innerHTML = selectedDrinkImg
-                    descriptionEL.innerText = selectedDrinkDescription
+                    titleEL.innerText = selectedDrinkTitle;
+                    imageEL.innerHTML = selectedDrinkImg;
+                    descriptionEL.innerText = selectedDrinkDescription;
 
                     
                 }
@@ -111,9 +111,9 @@ function displayToday(todaysInfo) {
 
     console.log(todaysInfo)
     tempEl.textContent = 'It is ' + todaysInfo.main.temp + '°F';
-    if (todaysInfo.main.temp >= 65) {
+    if (todaysInfo.main.temp >= 18) {
         goodDay.textContent = 'Today is a good day for hot coffee!';
-    } else if (todaysInfo.main.temp <= 64) {
+    } else if (todaysInfo.main.temp <= 17) {
         goodDay.textContent = 'Today is a good day for iced coffee!';
     }
 }
