@@ -11,6 +11,7 @@ let randomButton = document.getElementById("random-coffee-button");
 
 
 function coffeeDrinks() {
+
     fetch("https://api.sampleapis.com/coffee/hot")
         .then(function (response) {
             return response.json();
@@ -28,6 +29,7 @@ function coffeeDrinks() {
 
 
 function generateDisplay(data) {
+    
     let randomInt = Math.floor(Math.random() * 20);
     const coffeeInfo = document.querySelector("#coffeeDesc")
     var titleEL = document.createElement("p")
@@ -59,7 +61,7 @@ randomButton.addEventListener('click', coffeeDrinks);
 
 
 function cityData(city) {
-    console.log(cityInput)
+
     fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=5f03a7ebe75741bbe3cd6f91f18b0bd7")
         .then(function (response) {
             return response.json();
