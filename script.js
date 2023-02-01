@@ -31,13 +31,13 @@ function generateDisplay(data) {
     const coffeeInfo = document.querySelector("#coffeeDesc")
 
     var titleEL = document.createElement("p")
-    var imageEL = document.createElement("p")
+    var imageEL = document.createElement("img")
     var descriptionEL = document.createElement("p")
     var ul = document.createElement("ul")
-
+    
     titleEL.innerText = data[randomInt].title
     descriptionEL.innerText = data[randomInt].description
-    imageEL.innerText = data[randomInt].image
+    imageEL.innerHTML = data[randomInt].image
 
     coffeeInfo.appendChild(titleEL)
     coffeeInfo.appendChild(imageEL)
