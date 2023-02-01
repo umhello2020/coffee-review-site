@@ -39,6 +39,10 @@ p {
     padding: 5px;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .button {
     background-color: rgb(78, 16, 1);
     font-size: 20px;
