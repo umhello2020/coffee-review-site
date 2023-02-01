@@ -43,6 +43,15 @@ ul {
     list-style-type: none;
 }
 
+li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 .button {
     background-color: rgb(78, 16, 1);
     font-size: 20px;

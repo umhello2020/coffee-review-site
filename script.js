@@ -7,7 +7,9 @@ let cityInput = document.getElementById('city-input');
 let randomDisplay = document.getElementById('random-display');
 let randomDiv = document.getElementById('random-coffee');
 let randomButton = document.getElementById("random-coffee-button");
+
 function coffeeDrinks() {
+
     fetch("https://api.sampleapis.com/coffee/hot")
         .then(function (response) {
             return response.json();
@@ -19,7 +21,9 @@ function coffeeDrinks() {
             generateDisplay(data)
         })
 }
+
 function generateDisplay(data) {
+    
     let randomInt = Math.floor(Math.random() * 20);
     const coffeeInfo = document.querySelector("#coffeeDesc")
     var titleEL = document.createElement("p")
@@ -33,6 +37,7 @@ function generateDisplay(data) {
     coffeeInfo.appendChild(imageEL)
     coffeeInfo.appendChild(descriptionEL)
     coffeeInfo.appendChild(ul);
+
     for (let j = 0; j < data[randomInt].ingredients.length; j++) {
         let currentIng = data[randomInt].ingredients[j]
         let li = document.createElement("li")
@@ -40,9 +45,11 @@ function generateDisplay(data) {
         ul.appendChild(li)
     }
 }
+
 randomButton.addEventListener('click', coffeeDrinks);
+
 function cityData(city) {
-    console.log(cityInput)
+
     fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=5f03a7ebe75741bbe3cd6f91f18b0bd7")
         .then(function (response) {
             return response.json();
@@ -53,6 +60,7 @@ function cityData(city) {
             currentDay(currentLat, currentLon);
         })
 }
+
 function currentDay(lat, lon) {
     fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=5f03a7ebe75741bbe3cd6f91f18b0bd7")
         .then(function (response) {
@@ -63,6 +71,7 @@ function currentDay(lat, lon) {
             displayToday(todaysInfo);
         })
 }
+
 function displayToday(todaysInfo) {
     let tempEl = document.getElementById('temp-display');
     let goodDay = document.getElementById('good-day');
@@ -74,6 +83,7 @@ function displayToday(todaysInfo) {
         goodDay.textContent = 'Today is a good day for iced coffee!';
     }
 }
+
 submitBtn.addEventListener('click', function () {
     city = cityInput.value;
     cityData(city);
