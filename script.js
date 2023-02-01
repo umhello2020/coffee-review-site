@@ -55,7 +55,7 @@ function generateDisplay(data) {
     }
 }
 
-andomButton.addEventListener('click', coffeeDrinks);
+randomButton.addEventListener('click', coffeeDrinks);
 
 
 function cityData(city) {
